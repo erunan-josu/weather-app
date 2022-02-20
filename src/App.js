@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from 'react'
+// Styles
+import './styles/index.scss'
+// Context
+import DataContext from './context/DataContext'
+import { MobileContextProvider } from './context/MobileContext'
+// Components
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Main from './components/Main'
+// Functions
+import { searchCelsiusData, searchFahrenheitData } from './getContextData'
+/* import from './getDate' */
 
 function App() {
+  const { cityName, setCityData, celsius } = useContext(DataContext)
+
+  const getInitialData = async () => {
+    if (celsius) {
+      const data = await searchCelsiusData(cityName)
+      setCityData(data)
+    } else {
+      const data = await searchFahrenheitData(cityName)
+      setCityData(data)
+    }
+  }
+
+  useEffect(() => {
+    getInitialData()
+  }, [cityName, celsius])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <MobileContextProvider>
+        <Main />
+      </MobileContextProvider>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

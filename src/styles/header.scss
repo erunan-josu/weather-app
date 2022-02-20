@@ -1,0 +1,48 @@
+header {
+  height: 60px;
+  padding: 0rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    padding-right: 3rem;
+    font-family: 'Comforter', cursive;
+    letter-spacing: 2px;
+  }
+}
+
+.theme-icon {
+  cursor: pointer;
+  color: #ffa500;
+  font-size: 2rem;
+}
+
+.options-container {
+  min-width: 100px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .temp-select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      padding-left: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 0rem 3rem;
+
+    .options-container {
+      width: 100px;
+    }
+  }
+}
