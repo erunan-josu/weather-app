@@ -11,11 +11,15 @@ const Footer = () => {
   return (
     <footer className={theme}>
       <p> &copy; Josu Hernandez</p>
-      <a href="https://github.com/erunan-josu">
+      <a target="blank" href="https://github.com/erunan-josu" className={theme}>
         <FontAwesomeIcon icon={faGithub} className="icon" />
         erunan-josu
       </a>
-      <a href="https://www.instagram.com/erunan.josu/">
+      <a
+        target="blank"
+        href="https://www.instagram.com/erunan.josu/"
+        className={theme}
+      >
         <FontAwesomeIcon icon={faInstagram} className="icon" />
         erunan.josu
       </a>

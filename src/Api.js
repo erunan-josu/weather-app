@@ -9,10 +9,10 @@ export const geolocation_URL = (city) => {
 
 // celsius
 export const celsius_forecast_URL = (lat, lon) => {
-  return `${base_url}${forecast_url}lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=metric&appid=${api_key}&lang=es`
+  return `${base_url}${forecast_url}lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=metric&appid=${api_key}`
 }
 
 // fahrenheit
 export const fahrenheit_forecast_URL = (lat, lon) => {
-  return `${base_url}${forecast_url}lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=imperial&appid=${api_key}&lang=es`
+  return `${base_url}${forecast_url}lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=imperial&appid=${api_key}`
 }
