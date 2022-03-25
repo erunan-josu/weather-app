@@ -9,6 +9,10 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0rem 1rem;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      color: #ffa500;
+    }
   }
   .icon {
     padding: 0.5rem;

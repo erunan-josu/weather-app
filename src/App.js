@@ -10,7 +10,6 @@ import Footer from './components/Footer'
 import Main from './components/Main'
 // Functions
 import { searchCelsiusData, searchFahrenheitData } from './getContextData'
-/* import from './getDate' */
 
 function App() {
   const { cityName, setCityData, celsius } = useContext(DataContext)
