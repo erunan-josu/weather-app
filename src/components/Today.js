@@ -41,8 +41,8 @@ const Today = () => {
         <div className="today-info-bottom">
           <ExtraInfo name="Min" data={tempMin} unit={unit()} />
           <ExtraInfo name="Max" data={tempMax} unit={unit()} />
-          <ExtraInfo name="Sensación" data={feels_like} unit={unit()} />
-          <ExtraInfo name="Humedad" data={humidity} unit={' %'} />
+          <ExtraInfo name="Feels like" data={feels_like} unit={unit()} />
+          <ExtraInfo name="Humidity" data={humidity} unit={' %'} />
         </div>
       </div>
     </div>
