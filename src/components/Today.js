@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { icons } from '../svg/svg'
+import { icons } from '../svg'
 
 // styles
 import '../styles/today.scss'

@@ -1,4 +1,4 @@
-const base_url = 'http://api.openweathermap.org/'
+const base_url = 'https://api.openweathermap.org/'
 const geo_url = 'geo/1.0/direct?q='
 const forecast_url = 'data/2.5/onecall?'
 const api_key = process.env.REACT_APP_API_KEY
